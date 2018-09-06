@@ -40,6 +40,60 @@ namespace SortAlgorithms
             } while (swapped == true);
         }
 
+        public static void InsertionSort(int[] arr)
+        {
+            int newValue;
+
+            for (int i = 1; i < arr.Length; i++)
+            {
+                newValue = arr[i];
+
+                int j = i;
+
+                while (j > 0 && arr[j - 1] > newValue)
+                {
+                    arr[j] = arr[j - 1];
+
+                    j--;
+                }
+                arr[j] = newValue;
+            }
+        }
+
+        public static void SelectionSort(int[] arr)
+        {
+            //minPos will  keep track of where the minimum value is located
+            int minPos;
+
+            // temp is used for the swapping of values for the sort
+            int temp;
+
+            // outer loop will be responsible for ensuring we have iterated over the entire array
+            for (int i = 0; i < arr.Length - 1; i++)
+            {
+                //set minPos to the current counter value for traversing the array
+                minPos = i;
+
+                // inner loop will perform the comparisons between the min and the other values in the array
+                for (int j = i + 1; j < arr.Length; j++)
+                {
+                    if (arr[j] < arr[minPos])
+                    {
+                        //minPos will keep track of the index that min is in, this is needed when a swap happens
+                        minPos = j;
+                    }
+                }
+
+                //if minPos no longer equals i, it indicates a smaller value existed so a swap must take place to sort the values
+                if (minPos != i)
+                {
+                    temp = arr[i];
+                    arr[i] = arr[minPos];
+                    arr[minPos] = temp;
+                }
+            }
+        }
+
         public static void QuickSort(int[] arr, int left, int right)
         {
             if(left < right)
@@ -72,6 +126,42 @@ namespace SortAlgorithms
                 }
                 else
                     return right;
+            }
+        }
+
+        public static void QuickSort<T>(T[] elements, int left, int right) where T : IComparable
+        {
+            int i = left, j = right;
+            IComparable pivot = elements[(left + right) / 2];
+
+            while (i <= j)
+            {
+                while (elements[i].CompareTo(pivot) < 0)
+                    i++;
+
+                while (elements[j].CompareTo(pivot) > 0)
+                    j--;
+
+                if (i <= j)
+                {
+                    IComparable temp = elements[i];
+                    elements[i] = elements[j];
+                    elements[j] = (T)temp;
+
+                    i++;
+                    j--;
+                }
+            }
+
+            // Recursive calls
+            if (left < j)
+            {
+                QuickSortComparable(elements, left, j);
+            }
+
+            if (i < right)
+            {
+                QuickSortComparable(elements, i, right);
             }
         }
     }
