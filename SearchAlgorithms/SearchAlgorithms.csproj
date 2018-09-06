@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CF455000-5E17-4A2F-B6A4-D6E24B671C75}</ProjectGuid>
+    <ProjectGuid>{375D0311-6B00-4A1B-9E10-5972D986A511}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>SortAlgorithms</RootNamespace>
-    <AssemblyName>SortAlgorithms</AssemblyName>
+    <RootNamespace>SearchAlgorithms</RootNamespace>
+    <AssemblyName>SearchAlgorithms</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -44,7 +44,6 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Sort.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
