@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchAlgorithms", "SearchA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayAlgorithms", "ArrayAlgorithms\ArrayAlgorithms.csproj", "{186554EA-EB01-4155-90D0-1C26AE71D20F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Misc", "Misc\Misc.csproj", "{164660E3-6010-4909-AE94-410795F9D378}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{186554EA-EB01-4155-90D0-1C26AE71D20F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{186554EA-EB01-4155-90D0-1C26AE71D20F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{186554EA-EB01-4155-90D0-1C26AE71D20F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{164660E3-6010-4909-AE94-410795F9D378}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164660E3-6010-4909-AE94-410795F9D378}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164660E3-6010-4909-AE94-410795F9D378}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164660E3-6010-4909-AE94-410795F9D378}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
