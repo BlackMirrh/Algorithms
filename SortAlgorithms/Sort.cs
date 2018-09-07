@@ -156,12 +156,12 @@ namespace SortAlgorithms
             // Recursive calls
             if (left < j)
             {
-                QuickSortComparable(elements, left, j);
+                QuickSort(elements, left, j);
             }
 
             if (i < right)
             {
-                QuickSortComparable(elements, i, right);
+                QuickSort(elements, i, right);
             }
         }
     }
