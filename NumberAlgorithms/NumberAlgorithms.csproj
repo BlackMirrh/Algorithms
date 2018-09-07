@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{186554EA-EB01-4155-90D0-1C26AE71D20F}</ProjectGuid>
+    <ProjectGuid>{289DB30B-4FD0-4B46-9B6B-51C850D72BA6}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ArrayAlgorithms</RootNamespace>
-    <AssemblyName>ArrayAlgorithms</AssemblyName>
+    <RootNamespace>NumberAlgorithms</RootNamespace>
+    <AssemblyName>NumberAlgorithms</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,17 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Duplicate.cs" />
-    <Compile Include="FindMajority.cs" />
-    <Compile Include="FindMissing.cs" />
-    <Compile Include="MergeArray.cs" />
-    <Compile Include="MoveZeroToEnd.cs" />
+    <Compile Include="EuclidAlgorithm.cs" />
+    <Compile Include="Factorial.cs" />
+    <Compile Include="Fibonacci.cs" />
+    <Compile Include="NarcissisticNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RotateArray.cs" />
-    <Compile Include="SumArray.cs" />
-    <Compile Include="SumCompare.cs" />
-    <Compile Include="SwapMinMax.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

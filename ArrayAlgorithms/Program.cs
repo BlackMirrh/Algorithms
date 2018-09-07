@@ -10,12 +10,25 @@ namespace ArrayAlgorithms
     {
         static void Main(string[] args)
         {
-            int[] arr = { 5, 9, 7, 3, 8, 2, 1, 4, 6, 5, 0, 0, 0, 0, 0 };
-            int[] arr2 = { 10, 13, 15, 17, 19 };
+            int[] arr = { 1, 2, 3, 4, 5, 6, 7, 8, 10, 10,11,12,13,14,15,16,17,18,19,20 };
+
+            Console.WriteLine(Duplicate.IsDuplicated(arr));
+
+            //MoveZeroToEnd.MoveZeroToEndArray(arr);
+
+            //SwapMinMax.SwapMinMaxElement(arr);
+
+            //Console.WriteLine(SumArray.SumArrayElements(arr));
+
+            //int[] arr2 = { 10, 13, 15, 17, 19 };
+
+            //int[] result = FindMissing.FindMissingIndex(arr, 50);
+
+            //Console.WriteLine(FindMissing.FindMissingValue(arr, 19));
 
             //Console.WriteLine(FindMajority.FindMajorityElement(arr));
-            int pivot = (arr.Length + arr2.Length) / 2;
-            MergeArray.merge(arr, arr2, pivot);
+            //int pivot = (arr.Length + arr2.Length) / 2;
+            //MergeArray.merge(arr, arr2, pivot);
 
             //Console.WriteLine(SumCompare.IsSumToArray(arr));
 
@@ -23,10 +36,10 @@ namespace ArrayAlgorithms
 
             //Array.Reverse(arr);
 
-            foreach (int i in arr)
-            {
-                Console.Write("{0}, ", i);
-            }
+            //foreach (int i in arr)
+            //{
+            //    Console.Write("{0}, ", i);
+            //}
 
             Console.ReadLine();
         }

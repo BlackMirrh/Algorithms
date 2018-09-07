@@ -17,6 +17,7 @@ namespace ArrayAlgorithms
 
         public static int[] MergeArrays(int[] x, int[] y)
         {
+
             int[] mergedSortedArray = new int[x.Length + y.Length];
             for (var i = x.Length - 1; i >= 0; --i)
             {
