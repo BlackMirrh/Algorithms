@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Misc", "Misc\Misc.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NumberAlgorithms", "NumberAlgorithms\NumberAlgorithms.csproj", "{289DB30B-4FD0-4B46-9B6B-51C850D72BA6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursionAlgorithms", "RecursionAlgorithms\RecursionAlgorithms.csproj", "{31F680CA-ABAA-4C3C-994F-C4ECD9661B87}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{59F2C034-3C9E-4E0A-B083-9A3B6E360997}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{289DB30B-4FD0-4B46-9B6B-51C850D72BA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{289DB30B-4FD0-4B46-9B6B-51C850D72BA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{289DB30B-4FD0-4B46-9B6B-51C850D72BA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31F680CA-ABAA-4C3C-994F-C4ECD9661B87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31F680CA-ABAA-4C3C-994F-C4ECD9661B87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31F680CA-ABAA-4C3C-994F-C4ECD9661B87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31F680CA-ABAA-4C3C-994F-C4ECD9661B87}.Release|Any CPU.Build.0 = Release|Any CPU
+		{59F2C034-3C9E-4E0A-B083-9A3B6E360997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{59F2C034-3C9E-4E0A-B083-9A3B6E360997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{59F2C034-3C9E-4E0A-B083-9A3B6E360997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{59F2C034-3C9E-4E0A-B083-9A3B6E360997}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

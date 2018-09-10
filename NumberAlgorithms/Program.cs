@@ -10,7 +10,7 @@ namespace NumberAlgorithms
     {
         static void Main(string[] args)
         {
-            FizzBuzz.PrintFizzBuzz(100);
+            //FizzBuzz.PrintFizzBuzz(100);
 
             //Console.WriteLine(Palindromic.IsPalindromic(15851));
 
@@ -20,9 +20,14 @@ namespace NumberAlgorithms
             //Console.WriteLine(EuclidAlgorithm.GCD(24, 60));
             //Console.WriteLine("********* LCM **********");
             //Console.WriteLine(EuclidAlgorithm.LCM(24, 60));
-                                       
-            //Console.Write("Please enter a numeric value : ");
-            //int input = Int32.Parse(Console.ReadLine());
+
+            Console.Write("Please enter a numeric value : ");
+            int input = Int32.Parse(Console.ReadLine());
+
+            if ((input % 2) == 0)
+                Console.WriteLine("The value is divisible.");
+            else
+                Console.WriteLine("The value is not divisible.");
 
             //Console.WriteLine(PrimeNumber.IsPrimeNumber(input));
 

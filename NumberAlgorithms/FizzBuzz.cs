@@ -14,13 +14,22 @@ namespace NumberAlgorithms
 
             for(int i = 1; i <= n; i++)
             {
-                if ((i % 3) == 0 && (i % 5) == 0)
-                    sb.Append("FizzBuzz");
-                else if ((i % 3) == 0)
+                bool IsFizz = false;
+                bool IsBuzz = false;
+
+                if ((i % 3) == 0)
+                {
                     sb.Append("Fizz");
-                else if ((i % 5) == 0)
+                    IsFizz = true;
+                }
+
+                if ((i % 5) == 0)
+                {
                     sb.Append("Buzz");
-                else
+                    IsBuzz = true;
+                }
+                
+                if(!IsFizz && !IsBuzz)
                     sb.Append(i.ToString());
             }
 
