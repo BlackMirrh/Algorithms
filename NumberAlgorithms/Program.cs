@@ -10,10 +10,21 @@ namespace NumberAlgorithms
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(NarcissisticNumber.IsNarcissisticNumber(153));
+            FizzBuzz.PrintFizzBuzz(100);
 
-            //Console.Write("Please enter 1st numeric value : ");
-            //int input1 = Int32.Parse(Console.ReadLine());
+            //Console.WriteLine(Palindromic.IsPalindromic(15851));
+
+            //Console.WriteLine(NarcissisticNumber.IsNarcissisticNumber(153));
+
+            //Console.WriteLine("********* GCD **********");
+            //Console.WriteLine(EuclidAlgorithm.GCD(24, 60));
+            //Console.WriteLine("********* LCM **********");
+            //Console.WriteLine(EuclidAlgorithm.LCM(24, 60));
+                                       
+            //Console.Write("Please enter a numeric value : ");
+            //int input = Int32.Parse(Console.ReadLine());
+
+            //Console.WriteLine(PrimeNumber.IsPrimeNumber(input));
 
             //Console.Write("Please enter 2nd numeric value : ");
             //int input2 = Int32.Parse(Console.ReadLine());
@@ -22,7 +33,7 @@ namespace NumberAlgorithms
             //    Console.WriteLine("Invalid value : Not able to divide by zero.");
             //else
             //    Console.WriteLine(input1 % input2);
-            
+
             //Console.WriteLine(Fibonacci.NthFibonacci(12));
             //Console.WriteLine(Factorial.FacRecursion(5));
 

@@ -8,16 +8,11 @@ namespace NumberAlgorithms
 {
     public static class NarcissisticNumber
     {
-        static int CountDigit(int n)
-        {
-            if (n == 0)
-                return 0;
-            return 1 + CountDigit(n / 10);
-        }
+        
 
         public static bool IsNarcissisticNumber(int n)
         {
-            int exponent = CountDigit(n);
+            int exponent = Util.CountDigit(n);
             int dup = n;
             int sum = 0;
 

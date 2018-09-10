@@ -45,9 +45,13 @@
     <Compile Include="EuclidAlgorithm.cs" />
     <Compile Include="Factorial.cs" />
     <Compile Include="Fibonacci.cs" />
+    <Compile Include="FizzBuzz.cs" />
     <Compile Include="NarcissisticNumber.cs" />
+    <Compile Include="Palindromic.cs" />
+    <Compile Include="PrimeNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
