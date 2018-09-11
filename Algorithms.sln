@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecursionAlgorithms", "Recu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Graph", "Graph\Graph.csproj", "{59F2C034-3C9E-4E0A-B083-9A3B6E360997}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPattern", "DesignPattern\DesignPattern.csproj", "{524BF1DB-A268-4053-8C9E-E18F3361D3F1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{59F2C034-3C9E-4E0A-B083-9A3B6E360997}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59F2C034-3C9E-4E0A-B083-9A3B6E360997}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59F2C034-3C9E-4E0A-B083-9A3B6E360997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{524BF1DB-A268-4053-8C9E-E18F3361D3F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{524BF1DB-A268-4053-8C9E-E18F3361D3F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{524BF1DB-A268-4053-8C9E-E18F3361D3F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{524BF1DB-A268-4053-8C9E-E18F3361D3F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
