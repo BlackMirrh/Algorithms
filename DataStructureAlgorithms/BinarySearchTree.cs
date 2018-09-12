@@ -42,20 +42,20 @@ namespace DataStructureAlgorithms
             Traverse(root.right);
         }
 
-        public Node GetNode(Node node, int searchTarget)
+        public Node GetMinNode(Node node)
         {
-            if(node.value == searchTarget)
-            {
+            if (node.left == null)
                 return node;
-            }
-            else if (searchTarget < node.value)
-            {
-                return GetNode(node.left, searchTarget);
-            }
             else
-            {
-                return GetNode(node.right, searchTarget);
-            }
-        }     
+                return GetMinNode(node.left);
+        }
+
+        public Node GetMaxNode(Node node)
+        {
+            if (node.right == null)
+                return node;
+            else
+                return GetMaxNode(node.right);
+        }
     }      
 }
