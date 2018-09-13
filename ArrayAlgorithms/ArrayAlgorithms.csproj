@@ -45,6 +45,7 @@
     <Compile Include="Duplicate.cs" />
     <Compile Include="FindMajority.cs" />
     <Compile Include="FindMissing.cs" />
+    <Compile Include="FindSumOfZero.cs" />
     <Compile Include="MergeArray.cs" />
     <Compile Include="MoveZeroToEnd.cs" />
     <Compile Include="Program.cs" />
@@ -56,6 +57,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SearchAlgorithms\SearchAlgorithms.csproj">
+      <Project>{375d0311-6b00-4a1b-9e10-5972d986a511}</Project>
+      <Name>SearchAlgorithms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SortAlgorithms\SortAlgorithms.csproj">
+      <Project>{CF455000-5E17-4A2F-B6A4-D6E24B671C75}</Project>
+      <Name>SortAlgorithms</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
