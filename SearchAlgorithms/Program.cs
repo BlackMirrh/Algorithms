@@ -10,39 +10,45 @@ namespace SearchAlgorithms
     {
         static void Main(string[] args)
         {
-            int[] arr = { 5, 9, 7, 3, 8, 2, 1, 4, 6 };
+            Node n1 = new Node(1, null, null);
+            Node n3 = new Node(3, null, null);
+            Node n2 = new Node(2, n1, n3);
+
+            Console.WriteLine(BinarySearchTree.Contains(n2, 3));
+
+            //int[] arr = { 5, 9, 7, 3, 8, 2, 1, 4, 6 };
 
             #region LinearSearch
 
             // declare an array of integers that will be used for searching
-            int term = 6;
-            int index = Search.LinearSearch(arr, term);
+            //int term = 6;
+            //int index = Search.LinearSearch(arr, term);
 
-            if (index != -1)
-            {
-                Console.WriteLine($"Your search term was found at position {index}");
-            }
-            else
-            {
-                Console.WriteLine("Your search term was not found.");
-            }
+            //if (index != -1)
+            //{
+            //    Console.WriteLine($"Your search term was found at position {index}");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Your search term was not found.");
+            //}
 
             #endregion
 
 
             #region BinarySearch
             // declare an array of integers that will be used for searching
-            int searchTerm = 8;
-            int result = Search.BinarySearch(arr, searchTerm, 0, arr.Length - 1);
+            //int searchTerm = 8;
+            //int result = Search.BinarySearch(arr, searchTerm, 0, arr.Length - 1);
 
-            if (result != -1)
-            {
-                Console.WriteLine($"Search term found at index {result}.");
-            }
-            else
-            {
-                Console.WriteLine("Search term not found in the array.");
-            }
+            //if (result != -1)
+            //{
+            //    Console.WriteLine($"Search term found at index {result}.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("Search term not found in the array.");
+            //}
 
             #endregion
 
