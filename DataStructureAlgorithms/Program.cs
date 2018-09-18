@@ -9,7 +9,7 @@ namespace DataStructureAlgorithms
         {
             Node root = null;
             Tree bst = new Tree();
-            int SIZE = 2000000;
+            int SIZE = 10000;
             int[] a = new int[SIZE];
 
             Console.WriteLine("Generating random array with {0} values...", SIZE);
@@ -40,22 +40,21 @@ namespace DataStructureAlgorithms
 
             Console.WriteLine("Done. Took {0} seconds", (double)watch.ElapsedMilliseconds / 1000.0);
             Console.WriteLine();
-            Console.WriteLine("Traversing all {0} nodes in tree...", SIZE);
-
-            watch = Stopwatch.StartNew();
-
+            //Console.WriteLine("Traversing all {0} nodes in tree...", SIZE);
+            //watch = Stopwatch.StartNew();
             //bst.Traverse(root);
+            //watch.Stop();
+            //Console.WriteLine("Done. Took {0} seconds", (double)watch.ElapsedMilliseconds / 1000.0);
 
-            Node node = bst.GetNode(root, 8631); 
-            watch.Stop();
+            Node node = bst.GetMaxNode(root);
 
-            Console.WriteLine("Done. Took {0} seconds", (double)watch.ElapsedMilliseconds / 1000.0);
-            Console.WriteLine();
+            Console.WriteLine("Max value : " + node.value);
+
+            node = bst.GetMinNode(root);
+
+            Console.WriteLine("Min value : " + node.value);
 
             Console.ReadKey();
-
-
-
         }
     }
 }

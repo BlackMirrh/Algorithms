@@ -45,6 +45,7 @@
     <Compile Include="EuclidAlgorithm.cs" />
     <Compile Include="Factorial.cs" />
     <Compile Include="Fibonacci.cs" />
+    <Compile Include="FindSumOfZero.cs" />
     <Compile Include="FizzBuzz.cs" />
     <Compile Include="NarcissisticNumber.cs" />
     <Compile Include="Palindromic.cs" />
@@ -55,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SortAlgorithms\SortAlgorithms.csproj">
+      <Project>{CF455000-5E17-4A2F-B6A4-D6E24B671C75}</Project>
+      <Name>SortAlgorithms</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
