@@ -44,6 +44,8 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="DeepCopy.cs" />
+    <Compile Include="LexicographicalOrder.cs" />
+    <Compile Include="MostFrequent.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

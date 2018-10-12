@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -188,14 +189,31 @@ namespace Misc
     {
         static void Main(string[] args)
         {
-            Friend a = new Friend("A");
-            Friend b = new Friend("B");
-            Friend c = new Friend("C");
+            string input = "Rose is a flower red rose are flower";
+            string input2 = "Jack and jill went to the market to buy bread and cheese. Cheese is Jack's and Jill's favorite food.";
+            string[] arr = Regex.Replace(input.ToLower(), @"[^a-z]+", " ").Split(' ');
+            string[] arr2 = Regex.Replace(input2.ToLower(), @"[^a-z]+", " ").Split(' ');
+            string[] excludeArr = { "is", "are", "a" };
+            string[] excludeArr2 = { "and", "he", "the", "to", "is"};
 
-            a.AddFriendship(b);
-            b.AddFriendship(c);
+            //string[] result = MostFrequent.FindMostFrequent(arr, excludeArr);
+            string[] result = MostFrequent.FindMostFrequent(arr2, excludeArr2);
 
-            Console.WriteLine(a.CanBeConnected(c));
+            Console.WriteLine("Most Frequent Elements");
+            foreach(string s in result)
+            {
+                Console.Write(s + ", ");
+            }
+
+
+            //Friend a = new Friend("A");
+            //Friend b = new Friend("B");
+            //Friend c = new Friend("C");
+
+            //a.AddFriendship(b);
+            //b.AddFriendship(c);
+
+            //Console.WriteLine(a.CanBeConnected(c));
 
             //MovingTotal movingTotal = new MovingTotal();
 
