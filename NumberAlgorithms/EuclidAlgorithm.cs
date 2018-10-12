@@ -37,6 +37,31 @@ namespace NumberAlgorithms
                 return a;
         }
 
+        // num = 5
+        // arr = [2,4,6,8,10]
+        // Output = 2
+
+        // arr = [2,3,4,5,6]
+        // Output = 1
+        public static int generalizedGCD(int num, int[] arr)
+        {
+            int result = 1;
+
+            for(int i = 0; i < num; i++)
+            {
+                for (int j = 0; j < num; j++)
+                {
+                    if (i != j)
+                    {
+                        int gcd = GCD(arr[i], arr[j]);
+                        if (gcd > result)
+                            result = gcd;
+                    }
+                }
+            }
+            return result;
+        }
+
         public static int LCM(int a, int b)
         {
             return (a * b) / GCD(a, b);
