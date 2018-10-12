@@ -10,20 +10,20 @@ namespace NumberAlgorithms
     {
         static void Main(string[] args)
         {
-            string word = "Deleveled";
-            Console.WriteLine(Palindromic.IsPalindrome(word));
+            //string word = "Deleveled";
+            //Console.WriteLine(Palindromic.IsPalindrome(word));
 
 
-            word = "Cat tac";
-            Console.WriteLine(Palindromic.IsPalindrome(word));
+            //word = "Cat tac";
+            //Console.WriteLine(Palindromic.IsPalindrome(word));
             //FizzBuzz.PrintFizzBuzz(100);
 
             //Console.WriteLine(Palindromic.IsPalindromic(15851));
 
             //Console.WriteLine(NarcissisticNumber.IsNarcissisticNumber(153));
 
-            //Console.WriteLine("********* GCD **********");
-            //Console.WriteLine(EuclidAlgorithm.GCD(24, 60));
+            Console.WriteLine("********* GCD **********");
+            Console.WriteLine(EuclidAlgorithm.GCD(24, 60));
             //Console.WriteLine("********* LCM **********");
             //Console.WriteLine(EuclidAlgorithm.LCM(24, 60));
 
