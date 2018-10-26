@@ -50,6 +50,7 @@
     <Compile Include="MoveZeroToEnd.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReverseWords.cs" />
     <Compile Include="RotateArray.cs" />
     <Compile Include="SumArray.cs" />
     <Compile Include="SumCompare.cs" />
