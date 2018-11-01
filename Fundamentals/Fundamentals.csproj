@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{186554EA-EB01-4155-90D0-1C26AE71D20F}</ProjectGuid>
+    <ProjectGuid>{C67B4D79-8A0C-4174-9D7C-DA59675127F5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ArrayAlgorithms</RootNamespace>
-    <AssemblyName>ArrayAlgorithms</AssemblyName>
+    <RootNamespace>Fundamentals</RootNamespace>
+    <AssemblyName>Fundamentals</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,33 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Duplicate.cs" />
-    <Compile Include="FindMajority.cs" />
-    <Compile Include="FindMissing.cs" />
-    <Compile Include="FindSumOfZero.cs" />
-    <Compile Include="MergeArray.cs" />
-    <Compile Include="MoveZeroToEnd.cs" />
+    <Compile Include="Account.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReverseWords.cs" />
-    <Compile Include="RotateArray.cs" />
-    <Compile Include="SumArray.cs" />
-    <Compile Include="SumCompare.cs" />
-    <Compile Include="SwapMinMax.cs" />
-    <Compile Include="UniqueSubstring.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\SearchAlgorithms\SearchAlgorithms.csproj">
-      <Project>{375d0311-6b00-4a1b-9e10-5972d986a511}</Project>
-      <Name>SearchAlgorithms</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SortAlgorithms\SortAlgorithms.csproj">
-      <Project>{CF455000-5E17-4A2F-B6A4-D6E24B671C75}</Project>
-      <Name>SortAlgorithms</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
