@@ -16,12 +16,17 @@ namespace Graph
                 Tuple.Create(4,7), Tuple.Create(5,7), Tuple.Create(5,8),
                 Tuple.Create(5,6), Tuple.Create(8,9), Tuple.Create(9,10)};
 
-            var graph = new Graph<int>(vertices, edges);      
+            var graph = new Graph<int>(vertices, edges);
+            var path = new List<int>();
 
-            Console.WriteLine(string.Join(", ", BreadthFirst.BFS(graph, 1)));
-            //# 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+            Console.WriteLine(string.Join(", ", BreadthFirst.BFS(graph, 1, v => path.Add(v))));
+            //# 1, 2, 3, 4, 5, 6, 7, 8, 9, 10    
+
+            //Console.WriteLine(string.Join(", ", BreadthFirst.BFS(graph, 1)));
+            Console.WriteLine(string.Join(", ", path));
+            //# 1, 2, 3, 4, 5, 6, 7, 8, 9, 10    
 
             Console.ReadLine();
-        }
+        }       
     }
 }

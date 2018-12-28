@@ -10,7 +10,7 @@ namespace SortAlgorithms
     {
         static void Main(string[] args)
         {
-            int[] arr = { 5, 9, 7, 3, 8, 2, 1, 4, 6 };
+            //int[] arr = { 5, 9, 7, 3, 8, 2, 1, 4, 6 };
 
             //SortedSet<int> sortedArr = new SortedSet<int>();
             //Console.WriteLine("============ SortedSet order ============");
@@ -31,11 +31,32 @@ namespace SortAlgorithms
             //    Console.WriteLine(a);
             //}
 
-            Sort.BubbleSort(arr);
-            Console.WriteLine("============ Bubble Sort ============");
-            foreach (var a in arr)
+            //Sort.BubbleSort(arr);
+            //Console.WriteLine("============ Bubble Sort ============");
+            //foreach (var a in arr)
+            //{
+            //    Console.WriteLine(a);
+            //}
+
+            List<int> unsorted = new List<int>();
+            List<int> sorted;
+
+            Random random = new Random();
+
+            Console.WriteLine("Original array elements:");
+            for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(a);
+                unsorted.Add(random.Next(0, 100));
+                Console.Write(unsorted[i] + " ");
+            }
+            Console.WriteLine();
+
+            sorted = Sort.MergeSort(unsorted);
+
+            Console.WriteLine("Sorted array elements: ");
+            foreach(int x in sorted)
+            {
+                Console.Write(x + " ");
             }
 
             Console.ReadLine();

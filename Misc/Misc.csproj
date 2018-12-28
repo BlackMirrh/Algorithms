@@ -43,7 +43,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="AlphanumericCompare.cs" />
     <Compile Include="DeepCopy.cs" />
+    <Compile Include="DeliveryDistance.cs" />
     <Compile Include="LexicographicalOrder.cs" />
     <Compile Include="MostFrequent.cs" />
     <Compile Include="Program.cs" />

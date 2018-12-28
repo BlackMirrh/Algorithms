@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 
 namespace DataStructureAlgorithms
@@ -7,52 +8,68 @@ namespace DataStructureAlgorithms
     {
         static void Main(string[] args)
         {
-            Node root = null;
-            Tree bst = new Tree();
-            int SIZE = 10000;
-            int[] a = new int[SIZE];
-
-            Console.WriteLine("Generating random array with {0} values...", SIZE);
-
-            Random random = new Random();
-
-            Stopwatch watch = Stopwatch.StartNew();
-
-            for (int i = 0; i < SIZE; i++)
+            int k = 10;
+            int[] input = { 2, 45, 7, 3, 5, 1, 8, 9 };
+            Dictionary<int, int> pairs = new Dictionary<int, int>();
+            
+            for(int i = 0; i < input.Length; i++)
             {
-                a[i] = random.Next(10000);
+                if(pairs.ContainsKey(input[i]))
+                {
+                    Console.WriteLine(input[i] + ", " + pairs[input[i]]);
+                }
+                else
+                {
+                    pairs[k - input[i]] = input[i];
+                }
             }
 
-            watch.Stop();
+            //Node root = null;
+            //Tree bst = new Tree();
+            //int SIZE = 10000;
+            //int[] a = new int[SIZE];
 
-            Console.WriteLine("Done. Took {0} seconds", (double)watch.ElapsedMilliseconds / 1000.0);
-            Console.WriteLine();
-            Console.WriteLine("Filling the tree with {0} nodes...", SIZE);
+            //Console.WriteLine("Generating random array with {0} values...", SIZE);
 
-            watch = Stopwatch.StartNew();
+            //Random random = new Random();
 
-            for (int i = 0; i < SIZE; i++)
-            {
-                root = bst.Insert(root, a[i]);
-            }
+            //Stopwatch watch = Stopwatch.StartNew();
 
-            watch.Stop();
+            //for (int i = 0; i < SIZE; i++)
+            //{
+            //    a[i] = random.Next(10000);
+            //}
 
-            Console.WriteLine("Done. Took {0} seconds", (double)watch.ElapsedMilliseconds / 1000.0);
-            Console.WriteLine();
-            //Console.WriteLine("Traversing all {0} nodes in tree...", SIZE);
-            //watch = Stopwatch.StartNew();
-            //bst.Traverse(root);
             //watch.Stop();
+
             //Console.WriteLine("Done. Took {0} seconds", (double)watch.ElapsedMilliseconds / 1000.0);
+            //Console.WriteLine();
+            //Console.WriteLine("Filling the tree with {0} nodes...", SIZE);
 
-            Node node = bst.GetMaxNode(root);
+            //watch = Stopwatch.StartNew();
 
-            Console.WriteLine("Max value : " + node.value);
+            //for (int i = 0; i < SIZE; i++)
+            //{
+            //    root = bst.Insert(root, a[i]);
+            //}
 
-            node = bst.GetMinNode(root);
+            //watch.Stop();
 
-            Console.WriteLine("Min value : " + node.value);
+            //Console.WriteLine("Done. Took {0} seconds", (double)watch.ElapsedMilliseconds / 1000.0);
+            //Console.WriteLine();
+            ////Console.WriteLine("Traversing all {0} nodes in tree...", SIZE);
+            ////watch = Stopwatch.StartNew();
+            ////bst.Traverse(root);
+            ////watch.Stop();
+            ////Console.WriteLine("Done. Took {0} seconds", (double)watch.ElapsedMilliseconds / 1000.0);
+
+            //Node node = bst.GetMaxNode(root);
+
+            //Console.WriteLine("Max value : " + node.value);
+
+            //node = bst.GetMinNode(root);
+
+            //Console.WriteLine("Min value : " + node.value);
 
             Console.ReadKey();
         }

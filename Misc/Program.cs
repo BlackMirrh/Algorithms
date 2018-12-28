@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading;
 using System.Threading.Tasks;
 
+delegate T NumberChanger<T>(T n);
 namespace Misc
 {
     class Complex
@@ -185,25 +186,253 @@ namespace Misc
         }
     }
 
+    // Define the base class, Car. The class defines two virtual methods,  
+    // DescribeCar and ShowDetails. DescribeCar calls ShowDetails, and each derived  
+    // class also defines a ShowDetails method. The example tests which version of  
+    // ShowDetails is used, the base class method or the derived class method.  
+    class Car
+    {
+        public virtual void DescribeCar()
+        {
+            System.Console.WriteLine("Four wheels and an engine.");
+            ShowDetails();
+        }
+
+        public virtual void ShowDetails()
+        {
+            System.Console.WriteLine("Standard transportation.");
+        }
+    }
+
+    // Define the derived classes.  
+
+    // Class ConvertibleCar uses the new modifier to acknowledge that ShowDetails  
+    // hides the base class method.  
+    class ConvertibleCar : Car
+    {
+        public new void ShowDetails()
+        {
+            System.Console.WriteLine("A roof that opens up.");
+        }
+    }
+
+    // Class Minivan uses the override modifier to specify that ShowDetails  
+    // extends the base class method.  
+    class Minivan : Car
+    {
+        public override void ShowDetails()
+        {
+            System.Console.WriteLine("Carries seven people.");
+        }
+    }
+
+
+
     class Program
     {
+        static int num = 10;
+
+        public static int AddNum(int p)
+        {
+            num += p;
+            return num;
+        }
+
+        public static int MultNum(int q)
+        {
+            num *= q;
+            return num;
+        }
+
+        public static int getNum()
+        {
+            return num;
+        }
+
+        public static void TestCars1()
+        {
+            System.Console.WriteLine("\nTestCars1");
+            System.Console.WriteLine("----------");
+
+            Car car1 = new Car();
+            car1.DescribeCar();
+            System.Console.WriteLine("----------");
+
+            // Notice the output from this test case. The new modifier is  
+            // used in the definition of ShowDetails in the ConvertibleCar  
+            // class.    
+            ConvertibleCar car2 = new ConvertibleCar();
+            car2.DescribeCar();
+            System.Console.WriteLine("----------");
+                                          
+            Minivan car3 = new Minivan();
+            car3.DescribeCar();
+            System.Console.WriteLine("----------");
+        }
+        // Output:  
+        // TestCars1  
+        // ----------  
+        // Four wheels and an engine.  
+        // Standard transportation.  
+        // ----------  
+        // Four wheels and an engine.  
+        // Standard transportation.  
+        // ----------  
+        // Four wheels and an engine.  
+        // Carries seven people.  
+        // ----------  
+
+        public static void TestCars2()
+        {
+            System.Console.WriteLine("\nTestCars2");
+            System.Console.WriteLine("----------");
+
+            var cars = new List<Car> { new Car(), new ConvertibleCar(),
+                new Minivan() };
+
+            foreach (var car in cars)
+            {
+                car.DescribeCar();
+                System.Console.WriteLine("----------");
+            }
+        }
+        // Output:  
+        // TestCars2  
+        // ----------  
+        // Four wheels and an engine.  
+        // Standard transportation.  
+        // ----------  
+        // Four wheels and an engine.  
+        // Standard transportation.  
+        // ----------  
+        // Four wheels and an engine.  
+        // Carries seven people.  
+        // ----------  
+
+        public static void TestCars3()
+        {
+            System.Console.WriteLine("\nTestCars3");
+            System.Console.WriteLine("----------");
+            ConvertibleCar car2 = new ConvertibleCar();
+            Minivan car3 = new Minivan();
+            car2.ShowDetails();
+            car3.ShowDetails();
+        }
+        // Output:  
+        // TestCars3  
+        // ----------  
+        // A roof that opens up.  
+        // Carries seven people.  
+
+        public static void TestCars4()
+        {
+            System.Console.WriteLine("\nTestCars4");
+            System.Console.WriteLine("----------");
+            Car car2 = new ConvertibleCar();
+            Car car3 = new Minivan();
+            car2.ShowDetails();
+            car3.ShowDetails();
+        }
+        // Output:  
+        // TestCars4  
+        // ----------  
+        // Standard transportation.  
+        // Carries seven people.  
+
         static void Main(string[] args)
         {
-            string input = "Rose is a flower red rose are flower";
-            string input2 = "Jack and jill went to the market to buy bread and cheese. Cheese is Jack's and Jill's favorite food.";
-            string[] arr = Regex.Replace(input.ToLower(), @"[^a-z]+", " ").Split(' ');
-            string[] arr2 = Regex.Replace(input2.ToLower(), @"[^a-z]+", " ").Split(' ');
-            string[] excludeArr = { "is", "are", "a" };
-            string[] excludeArr2 = { "and", "he", "the", "to", "is"};
+            // Declare objects of the derived classes and test which version  
+            // of ShowDetails is run, base or derived.  
+            TestCars1();
 
-            //string[] result = MostFrequent.FindMostFrequent(arr, excludeArr);
-            string[] result = MostFrequent.FindMostFrequent(arr2, excludeArr2);
+            // Declare objects of the base class, instantiated with the  
+            // derived classes, and repeat the tests.  
+            TestCars2();
 
-            Console.WriteLine("Most Frequent Elements");
-            foreach(string s in result)
-            {
-                Console.Write(s + ", ");
-            }
+            // Declare objects of the derived classes and call ShowDetails  
+            // directly.  
+            TestCars3();
+
+            // Declare objects of the base class, instantiated with the  
+            // derived classes, and repeat the tests.  
+            TestCars4();
+
+            //DeliveryDistance dd = new DeliveryDistance();
+            //List<List<int>> deliveries = new List<List<int>>();
+            //int[,] locations = { { 1, -3 }, { 1, 2 }, { 3, 4 } };
+            //deliveries = dd.ClosestXdestinations(3, locations, 2);
+
+            //foreach(var delivery in deliveries)
+            //{
+            //    Console.Write("Delivery Location : ");
+            //    foreach(var location in delivery)
+            //    {
+            //        Console.Write(location + ", ");
+            //    }
+            //    Console.Write(Environment.NewLine);
+            //}
+
+            #region Delegate Example
+            //int a, b;
+            //char c, d;
+            //a = 10;
+            //b = 20;
+            //c = 'I';
+            //d = 'V';
+
+            ////display values before swap:
+            //Console.WriteLine("Int values before calling swap:");
+            //Console.WriteLine("a = {0}, b = {1}", a, b);
+            //Console.WriteLine("Char values before calling swap:");
+            //Console.WriteLine("c = {0}, d = {1}", c, d);
+
+            //call swap
+            //Swap<int>(ref a, ref b);
+            //Swap<char>(ref c, ref d);
+
+            ////display values after swap:
+            //Console.WriteLine("Int values after calling swap:");
+            //Console.WriteLine("a = {0}, b = {1}", a, b);
+            //Console.WriteLine("Char values after calling swap:");
+            //Console.WriteLine("c = {0}, d = {1}", c, d);
+
+            ////Create delegate instances
+            //NumberChanger<int> nc1 = new NumberChanger<int>(AddNum);
+            //NumberChanger<int> nc2 = new NumberChanger<int>(MultNum);
+
+            ////calling the methods using the delegate objects
+            //nc1(25);
+            //Console.WriteLine("Value of Num: {0}", getNum());
+            //nc2(5);
+            //Console.WriteLine("Value of Num: {0}", getNum());
+            #endregion
+
+            //string[] log = { "t2 13 121 98", "rl box ape bit", "b4 xi me nu", "br8 eat num did", "wl has uni gry", "f3 52, 54, 31" };
+            //string[] reorderedLog = LexicographicalOrder.ReorderLexicographically(log.Length, log);
+
+            //Console.WriteLine("Reordered Log ");
+            //foreach (string s in reorderedLog)
+            //{
+            //    Console.WriteLine(s);
+            //}            
+            //ReorderLexicographically
+
+
+            //string input = "Rose is a flower red rose are flower";
+            //string input2 = "Jack and jill went to the market to buy bread and cheese. Cheese is Jack's and Jill's favorite food.";
+            //string[] arr = Regex.Replace(input.ToLower(), @"[^a-z]+", " ").Split(' ');
+            //string[] arr2 = Regex.Replace(input2.ToLower(), @"[^a-z]+", " ").Split(' ');
+            //string[] excludeArr = { "is", "are", "a" };
+            //string[] excludeArr2 = { "and", "he", "the", "to", "is"};
+
+            ////string[] result = MostFrequent.FindMostFrequent(arr, excludeArr);
+            //string[] result = MostFrequent.FindMostFrequent(arr2, excludeArr2);
+
+            //Console.WriteLine("Most Frequent Elements");
+            //foreach(string s in result)
+            //{
+            //    Console.Write(s + ", ");
+            //}
 
 
             //Friend a = new Friend("A");
@@ -268,6 +497,14 @@ namespace Misc
             //global::System.Console.WriteLine("Hello, World!");
 
             Console.ReadLine();
+        }
+
+        static void Swap<T> (ref T lhs, ref T rhs)
+        {
+            T temp;
+            temp = lhs;
+            lhs = rhs;
+            rhs = temp;
         }
 
         public static string[] FindCommon(string[] names1, string[] names2)
