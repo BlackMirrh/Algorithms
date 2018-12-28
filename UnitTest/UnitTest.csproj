@@ -55,6 +55,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Fundamentals\Fundamentals.csproj">
+      <Project>{c67b4d79-8a0c-4174-9d7c-da59675127f5}</Project>
+      <Name>Fundamentals</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Misc\Misc.csproj">
       <Project>{164660e3-6010-4909-ae94-410795f9d378}</Project>
       <Name>Misc</Name>

@@ -8,6 +8,17 @@ namespace DataStructureAlgorithms
         public int value;
         public Node left;
         public Node right;
+
+        public Node()
+        {
+
+        }
+
+        public Node(int item)
+        {
+            value = item;
+            left = right = null;
+        }
     }
 
     class Tree

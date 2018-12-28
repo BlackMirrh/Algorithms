@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C2F343DF-E71F-4040-AE95-9B23B4606D1B}</ProjectGuid>
+    <ProjectGuid>{C67B4D79-8A0C-4174-9D7C-DA59675127F5}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DataStructureAlgorithms</RootNamespace>
-    <AssemblyName>DataStructureAlgorithms</AssemblyName>
+    <RootNamespace>Fundamentals</RootNamespace>
+    <AssemblyName>Fundamentals</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -42,12 +42,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BinarySearchTree.cs" />
-    <Compile Include="BST.cs" />
-    <Compile Include="Graph.cs" />
+    <Compile Include="Account.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Traversal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

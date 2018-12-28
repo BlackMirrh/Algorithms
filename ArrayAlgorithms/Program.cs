@@ -7,22 +7,32 @@ namespace ArrayAlgorithms
     {
         static void Main(string[] args)
         {
-            int[] arr1 = { 1, 2, 3, 4, 13, 14, 15, 16, 17, 5, 0, 6, 7, 8, 10, -11,12,18,-19,-20, -21,-25,-23,-22,-24,-26,-27,-28,-29,-30};
+            UniqueSubstring us = new UniqueSubstring();
+            Console.WriteLine(us.NumberOfDistinctSubstring("theworldiswatching"));
 
-            int[] arr2 = { -1, -2, -3, -4, -5, 12, 13, 14, 0, 6, -7, -8, -10, 11, 15, 16, 17, 18, 19, 20, 21, 25, 23, 22, 24, 26, 27, 28, 29, 30 };
+            //string str = "I love you so much honey";
+            //ReverseWords reverseWords = new ReverseWords();
+            //string[] reversedWords = reverseWords.ReverseWordsWithInArray(str);
+            //foreach(string s in reversedWords)
+            //{
+            //    Console.WriteLine(s);
+            //}
+            //int[] arr1 = { 1, 2, 3, 4, 13, 14, 15, 16, 17, 5, 0, 6, 7, 8, 10, -11,12,18,-19,-20, -21,-25,-23,-22,-24,-26,-27,-28,-29,-30};
 
-            Stopwatch watch = new Stopwatch();
+            //int[] arr2 = { -1, -2, -3, -4, -5, 12, 13, 14, 0, 6, -7, -8, -10, 11, 15, 16, 17, 18, 19, 20, 21, 25, 23, 22, 24, 26, 27, 28, 29, 30 };
 
-            watch.Start();
-            FindSumOfZero.SumOfZero(arr1, arr2);
-            watch.Stop();
-            Console.WriteLine("Elapsed {0} milliseconds.", watch.ElapsedMilliseconds);
+            //Stopwatch watch = new Stopwatch();
+
+            //watch.Start();
+            //FindSumOfZero.SumOfZero(arr1, arr2);
+            //watch.Stop();
+            //Console.WriteLine("Elapsed {0} milliseconds.", watch.ElapsedMilliseconds);
 
 
-            watch.Start();
-            FindSumOfZero.SumOfZeroInteration(arr1, arr2);
-            watch.Stop();
-            Console.WriteLine("Elapsed {0} milliseconds.", watch.ElapsedMilliseconds);
+            //watch.Start();
+            //FindSumOfZero.SumOfZeroInteration(arr1, arr2);
+            //watch.Stop();
+            //Console.WriteLine("Elapsed {0} milliseconds.", watch.ElapsedMilliseconds);
 
             //Console.WriteLine(Duplicate.IsDuplicated(arr));
 
