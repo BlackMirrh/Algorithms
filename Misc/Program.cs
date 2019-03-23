@@ -343,19 +343,19 @@ namespace Misc
         {
             // Declare objects of the derived classes and test which version  
             // of ShowDetails is run, base or derived.  
-            TestCars1();
+            //TestCars1();
 
             // Declare objects of the base class, instantiated with the  
             // derived classes, and repeat the tests.  
-            TestCars2();
+            //TestCars2();
 
             // Declare objects of the derived classes and call ShowDetails  
             // directly.  
-            TestCars3();
+            //TestCars3();
 
             // Declare objects of the base class, instantiated with the  
             // derived classes, and repeat the tests.  
-            TestCars4();
+            //TestCars4();
 
             //DeliveryDistance dd = new DeliveryDistance();
             //List<List<int>> deliveries = new List<List<int>>();
@@ -496,7 +496,53 @@ namespace Misc
 
             //global::System.Console.WriteLine("Hello, World!");
 
+            //string binary = "101010";
+            //string hex = "2A";
+            //ConvertFromBase convertFromBase = new ConvertFromBase();
+            //Console.Write(convertFromBase.compareBinToHex(binary, hex));
+
+            //int[] arr = new int[] { 1, 2, 3, 4, 5, 6, 9, 7, 8 };
+
+            //int min = getMinIndex(arr);
+            //int max = getMaxIndex(arr);
+            //swap(arr, min, max);
+
+            //Console.WriteLine("After swap min max :");
+            //foreach(int i in arr)
+            //{
+            //    Console.WriteLine(i);
+            //}
+
             Console.ReadLine();
+        }
+
+        public static int getMinIndex(int[] arr)
+        {
+            int minIndex = 0;
+            for(int i = 1; i < arr.Length; i++)
+            {
+                if (arr[i] < arr[minIndex])
+                    minIndex = i;
+            }
+            return minIndex;
+        }
+
+        public static int getMaxIndex(int[] arr)
+        {
+            int maxIndex = 0;
+            for (int i = 1; i < arr.Length; i++)
+            {
+                if (arr[i] > arr[maxIndex])
+                    maxIndex = i;
+            }
+            return maxIndex;
+        }
+
+        public static void swap(int[] arr, int m, int n)
+        {
+            int temp = arr[m];
+            arr[m] = arr[n];
+            arr[n] = temp;
         }
 
         static void Swap<T> (ref T lhs, ref T rhs)

@@ -7,8 +7,8 @@ namespace ArrayAlgorithms
     {
         static void Main(string[] args)
         {
-            UniqueSubstring us = new UniqueSubstring();
-            Console.WriteLine(us.NumberOfDistinctSubstring("theworldiswatching"));
+            //UniqueSubstring us = new UniqueSubstring();
+            //Console.WriteLine(us.NumberOfDistinctSubstring("theworldiswatching"));
 
             //string str = "I love you so much honey";
             //ReverseWords reverseWords = new ReverseWords();
@@ -46,7 +46,7 @@ namespace ArrayAlgorithms
 
             //int[] result = FindMissing.FindMissingIndex(arr, 50);
 
-            //Console.WriteLine(FindMissing.FindMissingValue(arr, 19));
+
 
             //Console.WriteLine(FindMajority.FindMajorityElement(arr));
             //int pivot = (arr.Length + arr2.Length) / 2;
@@ -62,6 +62,9 @@ namespace ArrayAlgorithms
             //{
             //    Console.Write("{0}, ", i);
             //}
+
+            int[] arr = { 1, 2, 3, 4, 5, 7, 8, 9 };
+            Console.WriteLine(FindMissing.FindMissingBinaryTree(arr, arr.Length));
 
             Console.ReadLine();
         }

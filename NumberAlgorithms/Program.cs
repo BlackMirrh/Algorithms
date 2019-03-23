@@ -10,8 +10,10 @@ namespace NumberAlgorithms
     {
         static void Main(string[] args)
         {
-            Square sq = new Square();
-            Console.WriteLine(sq.Sqrt(100, 0.00001));
+            Reverse rev = new Reverse();
+            Console.WriteLine(rev.ReverseNumber(321));
+            //Square sq = new Square();
+            //Console.WriteLine(sq.Sqrt(100, 0.00001));
 
             //string word = "Deleveled";
             //Console.WriteLine(Palindromic.IsPalindrome(word));

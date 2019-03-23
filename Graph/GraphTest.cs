@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Graph
 {
-    public class Graph<T>
+    public class GraphTest<T>
     {
-        public Graph() { }
-        public Graph(IEnumerable<T> vertices, IEnumerable<Edge<T>> edges)
+        public GraphTest() { }
+
+        public GraphTest(IEnumerable<T> vertices, IEnumerable<EdgeTest<T>> edges)
         {
             foreach (var vertex in vertices)
                 AddVertex(vertex);
@@ -18,20 +19,19 @@ namespace Graph
                 AddEdge(edge);
         }
 
-        public Dictionary<T, LinkedList<T>> AdjacencyList { get; } = new Dictionary<T, LinkedList<T>>();
-
+        Dictionary<T, LinkedList<T>> adjacencyList { get; } = new Dictionary<T, LinkedList<T>>();
         public void AddVertex(T vertex)
         {
-            AdjacencyList[vertex] = new LinkedList<T>();
+            adjacencyList[vertex] = new LinkedList<T>();
         }
 
-        public void AddEdge(Edge<T> edge)
+        public void AddEdge(EdgeTest<T> edge)
         {
-            AdjacencyList[edge.src].AddLast(edge.dest);
-        }       
+            adjacencyList[edge.src].AddLast(edge.dest);
+        }
     }
 
-    public class Edge<T>
+    public class EdgeTest<T>
     {
         public T src;
         public T dest;

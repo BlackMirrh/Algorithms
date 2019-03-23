@@ -52,6 +52,7 @@
     <Compile Include="PrimeNumber.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reverse.cs" />
     <Compile Include="Square.cs" />
     <Compile Include="Util.cs" />
   </ItemGroup>

@@ -38,28 +38,40 @@ namespace SortAlgorithms
             //    Console.WriteLine(a);
             //}
 
-            List<int> unsorted = new List<int>();
-            List<int> sorted;
+            //List<int> unsorted = new List<int>();
+            //List<int> sorted;
 
-            Random random = new Random();
+            //Random random = new Random();
 
-            Console.WriteLine("Original array elements:");
-            for (int i = 0; i < 10; i++)
-            {
-                unsorted.Add(random.Next(0, 100));
-                Console.Write(unsorted[i] + " ");
-            }
-            Console.WriteLine();
+            //Console.WriteLine("Original array elements:");
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    unsorted.Add(random.Next(0, 100));
+            //    Console.Write(unsorted[i] + " ");
+            //}
+            //Console.WriteLine();
 
-            sorted = Sort.MergeSort(unsorted);
+            //sorted = Sort.MergeSort(unsorted);
 
-            Console.WriteLine("Sorted array elements: ");
-            foreach(int x in sorted)
-            {
-                Console.Write(x + " ");
-            }
+            //Console.WriteLine("Sorted array elements: ");
+            //foreach(int x in sorted)
+            //{
+            //    Console.Write(x + " ");
+            //}
+
+            int[] arr = { 170, 45, 75, 90, 802, 24, 2, 66 };
+            int n = arr.Length;
+            Sort.radixSort(arr, n);
+            print(arr, n);
 
             Console.ReadLine();
+        }
+
+        // A utility function to print an array  
+        public static void print(int[] arr, int n)
+        {
+            for (int i = 0; i < n; i++)
+                Console.Write(arr[i] + " ");
         }
     }
 }

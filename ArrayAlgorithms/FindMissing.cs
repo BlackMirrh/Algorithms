@@ -23,5 +23,31 @@ namespace ArrayAlgorithms
             }
             return total;
         }
+
+        public static int FindMissingBinaryTree(int[] arr, int n)
+        {
+            int a = 0, b = n - 1;
+            int mid = 0;
+
+            while ((b - a) > 1)
+            {
+                mid = (a + b) / 2;
+
+                if ((arr[a] - a) != (arr[mid] - mid))
+                    b = mid;
+                else if ((arr[b] - b) != (arr[mid] - mid))
+                    a = mid;
+            }
+
+            return (arr[mid] + 1);
+        }
+    }
+
+    public class Node
+    {
+        int val;
+
+        Node left = new Node();
+        Node right = new Node();
     }
 }

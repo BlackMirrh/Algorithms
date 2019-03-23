@@ -42,10 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BellmanFord.cs" />
     <Compile Include="BreadthFirst.cs" />
+    <Compile Include="DepthFirst.cs" />
+    <Compile Include="GFG.cs" />
     <Compile Include="Graph.cs" />
+    <Compile Include="GraphAlgorithms.cs" />
+    <Compile Include="GraphTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnionFind.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
