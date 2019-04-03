@@ -48,8 +48,10 @@
     <Compile Include="Graph.cs" />
     <Compile Include="HashCodeBuilder.cs" />
     <Compile Include="LRU.cs" />
+    <Compile Include="MaxLenZeroSumSub.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SpecialStack.cs" />
     <Compile Include="Traversal.cs" />
   </ItemGroup>
   <ItemGroup>

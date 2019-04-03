@@ -42,10 +42,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="A_Star.cs" />
     <Compile Include="BellmanFord.cs" />
     <Compile Include="BreadthFirst.cs" />
     <Compile Include="DepthFirst.cs" />
-    <Compile Include="GFG.cs" />
+    <Compile Include="Dijkstra.cs" />
     <Compile Include="Graph.cs" />
     <Compile Include="GraphAlgorithms.cs" />
     <Compile Include="GraphTest.cs" />

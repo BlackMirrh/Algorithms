@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Graph
 {
-    class GFG
+    class Dijkstra
     {
         static int V = 9;
         int minDistance (int[] dist, bool[] sptSet)
