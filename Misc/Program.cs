@@ -497,7 +497,8 @@ namespace Misc
             //global::System.Console.WriteLine("Hello, World!");
 
             //string binary = "101010";
-            //string hex = "2A";
+            //string hex = "2A";                                                      
+
             //ConvertFromBase convertFromBase = new ConvertFromBase();
             //Console.Write(convertFromBase.compareBinToHex(binary, hex));
 
@@ -513,7 +514,24 @@ namespace Misc
             //    Console.WriteLine(i);
             //}
 
+            string star = "*";
+
+            printStar(star,10);
+
             Console.ReadLine();
+        }
+
+        public static void printStar(string star, int numOfPrint)
+        {                   
+            for(int i = 0; i < numOfPrint; i++)
+            {    
+                for (int j = 0; j < i; j++)
+                {
+                    Console.Write(star);
+                }
+                Console.WriteLine();
+                
+            }
         }
 
         public static int getMinIndex(int[] arr)

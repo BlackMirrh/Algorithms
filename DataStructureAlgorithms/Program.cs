@@ -12,15 +12,15 @@ namespace DataStructureAlgorithms
 
             int[] arr = { 1, 2, 3, 4 };
             Disjoint.PrintNumOfFriends(friends, arr);
-            
-            //Traversal t = new Traversal();
-            //t.root = new Node(1);
-            //t.root.left = new Node(2);
-            //t.root.right = new Node(3);
-            //t.root.left.left = new Node(4);
-            //t.root.left.right = new Node(5);
-            //t.InorderTraversal();
-            
+
+            Traversal t = new Traversal();
+            t.root = new Node(1);
+            t.root.left = new Node(2);
+            t.root.right = new Node(3);
+            t.root.left.left = new Node(4);
+            t.root.left.right = new Node(5);
+            t.InorderTraversal();
+
             //Node root = null;
             //Tree bst = new Tree();
             //int SIZE = 10000;
@@ -30,7 +30,7 @@ namespace DataStructureAlgorithms
             //int k = 10;
             //int[] input = { 2, 45, 7, 3, 5, 1, 8, 9 };
             //Dictionary<int, int> pairs = new Dictionary<int, int>();
-            
+
             //for(int i = 0; i < input.Length; i++)
             //{
             //    if(pairs.ContainsKey(input[i]))
@@ -89,6 +89,34 @@ namespace DataStructureAlgorithms
             //node = bst.GetMinNode(root);
 
             //Console.WriteLine("Min value : " + node.value);
+
+            //Heap theHeap = new Heap(21);
+            //theHeap.Insert(40);
+            //theHeap.Insert(70);
+            //theHeap.Insert(20);
+            //theHeap.Insert(60);
+            //theHeap.Insert(50);
+            //theHeap.Insert(100);
+            //theHeap.Insert(82);
+            //theHeap.Insert(35);
+            //theHeap.Insert(90);
+            //theHeap.Insert(10);
+            //theHeap.DisplayHeap();
+            //Console.WriteLine("Inserting a new node with value 120");
+            //theHeap.Insert(120);
+            //theHeap.DisplayHeap();
+            //Console.WriteLine("Removing max element");
+            //theHeap.Remove();
+            //theHeap.DisplayHeap();
+            //Console.WriteLine("Changing root to 130");
+            //theHeap.HeapIncreaseDecreaseKey(0, 130);
+            //theHeap.DisplayHeap();
+            //Console.WriteLine("Changing root to 5");
+            //theHeap.HeapIncreaseDecreaseKey(0, 5);
+            //theHeap.DisplayHeap();
+            //Console.ReadLine();
+
+            //HashTableTutorial.Test();
 
             Console.ReadKey();
         }

@@ -47,6 +47,8 @@
     <Compile Include="Disjoint.cs" />
     <Compile Include="Graph.cs" />
     <Compile Include="HashCodeBuilder.cs" />
+    <Compile Include="HashTableTutorial.cs" />
+    <Compile Include="Heap.cs" />
     <Compile Include="LRU.cs" />
     <Compile Include="MaxLenZeroSumSub.cs" />
     <Compile Include="Program.cs" />

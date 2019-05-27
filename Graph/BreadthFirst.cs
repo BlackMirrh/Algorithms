@@ -107,5 +107,59 @@ namespace Graph
 
             return shortestPath;
         }
+
+        
+    }
+
+    public class BFSGraph
+    {
+        private int V;
+        private LinkedList<int> adj;
+
+        public BFSGraph(int v)
+        {
+            V = v;
+            adj = new LinkedList<int>(); 
+        }
+
+        public void addEdge(int v, int w)
+        {
+            adj.AddLast(w);
+        }
+
+        public void BFS(int s)
+        {
+            bool[] visited = new bool[V];
+
+            LinkedList<int> queue = new LinkedList<int>();
+            visited[s] = true;
+            queue.AddLast(s);
+
+            while (queue.Count != 0)
+            {
+                s = queue.First();
+                Console.WriteLine(s + " ");
+
+                foreach (int i in adj)
+                {
+                    int n = i;
+
+                }
+            }
+
+            for (LinkedListNode<int> it = queue.First; it != null;)
+            {
+                int n = it.Value;
+                Console.WriteLine(n + " ");
+
+                LinkedListNode<int> next = it.Next;
+                if (!visited[n])
+                {
+                    visited[n] = true;
+                    queue.AddLast(n);
+                }
+                it = next;      
+            }  
+        }
     }
 }

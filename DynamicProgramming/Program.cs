@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DynamicProgramming
 {
@@ -47,13 +48,27 @@ namespace DynamicProgramming
             //n = arr3.Length;
             //Console.WriteLine("" + OptimalGame.optimalStrategyOfGame(arr3, n));
 
-            int[] val = new int[] { 60, 100, 120 };
-            int[] wt = new int[] { 10, 20, 30 };
-            int W = 50;
-            int n = val.Length;
+            //int[] val = new int[] { 60, 100, 120 };
+            //int[] wt = new int[] { 10, 20, 30 };
+            //int W = 50;
+            //int n = val.Length;
 
-            Console.WriteLine(KnapSack.knapSackDP(W, wt, val, n));
+            //Console.WriteLine(KnapSack.knapSackDP(W, wt, val, n));
 
+            List<List<int>> all = new List<List<int>>();
+            List<int> set1 = new List<int>() { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+
+            PowerSet pw = new PowerSet();
+            all = pw.getSubsets(set1, 0);
+
+            foreach(var i in all)
+            {
+                foreach(var s in i)
+                {
+                    Console.Write(s + " ");
+                }
+                Console.WriteLine();
+            }
             Console.ReadLine();
         }
     }
